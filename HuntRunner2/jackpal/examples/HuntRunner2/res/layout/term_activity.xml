@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+
+    <jackpal.androidterm.emulatorview.EmulatorView
+        android:id="@+id/emulatorView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+ >
+
+
+
+<TextView
+            android:id="@+id/qText"
+            android:text="q"
+style="@style/CustomText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+/>
+
+<TextView
+            android:id="@+id/yText"
+            android:text="y"
+style="@style/CustomText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+/>
+
+<TextView
+            android:id="@+id/nText"
+            android:text="n"
+style="@style/CustomText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+/>
+
+<TextView
+            android:id="@+id/retText"
+            android:text="RET"
+style="@style/CustomText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+
+
+/>
+
+</LinearLayout>
+
+<!--styles from res/values/styles.xml: -->
+
+<TableLayout android:id="@+id/tableLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+
+	 android:layout_width="wrap_content"
+	 android:layout_height="wrap_content" 
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+
+>
+<TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<TextView
+            android:id="@+id/textView1"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView2"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView3"
+            android:text="k"
+style="@style/CustomText" 
+/>
+</TableRow>
+
+
+<TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<TextView
+            android:id="@+id/textView4"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView5"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView6"
+            android:text="K"
+style="@style/CustomText" 
+/>
+</TableRow>
+
+
+<TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<TextView
+            android:id="@+id/textView7"
+            android:text="h"
+style="@style/CustomText" 
+/>
+<TextView
+            android:id="@+id/textView8"
+            android:text="H"
+style="@style/CustomText" 
+/>
+<TextView
+            android:id="@+id/textView9"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView10"
+            android:text="L"
+style="@style/CustomText" 
+/>
+<TextView
+            android:id="@+id/textView11"
+            android:text="l"
+style="@style/CustomText" 
+/>
+</TableRow>
+<TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<TextView
+            android:id="@+id/textView12"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView13"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView14"
+            android:text="J"
+style="@style/CustomText" 
+/>
+
+</TableRow>
+<TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<TextView
+            android:id="@+id/textView15"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView16"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView17"
+            android:text="j"
+style="@style/CustomText" 
+/>
+</TableRow>
+<TableRow
+        android:id="@+id/tableRow6"
+	android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<TextView
+            android:id="@+id/textView18"
+            android:text=" "
+style="@style/CustomTextPlaceholder" 
+/>
+<TextView
+            android:id="@+id/textView19"
+            android:text="1"
+style="@style/CustomText" 
+/>
+<TextView
+            android:id="@+id/textView20"
+            android:text="2"
+style="@style/CustomText" 
+/>
+<TextView
+            android:id="@+id/textView21"
+            android:text="3"
+style="@style/CustomText" 
+/>
+<TextView
+            android:id="@+id/textView22"
+            android:text="4"
+style="@style/CustomText" 
+/>
+</TableRow>
+</TableLayout>
+
+
+</RelativeLayout>

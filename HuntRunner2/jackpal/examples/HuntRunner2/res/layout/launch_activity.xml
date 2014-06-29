@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#202020"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:typeface="monospace"
+        android:padding="10dp"
+        android:text="@string/help" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/hostLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LaunchStyle"
+            android:textColor="@color/button_color"
+            android:text="@string/host_label" />
+
+        <EditText
+            android:id="@+id/hostname"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            style="@style/LaunchStyle"
+            android:layout_marginBottom="20dp"
+            android:maxLines="1"
+            android:inputType="textNoSuggestions"
+            android:digits="0123456789."
+            android:textColor="@color/button_color"
+            android:background="#1d1d1d"
+            android:imeOptions="actionDone"
+            android:text="@string/default_telnet_hostname" />
+
+
+        <Button
+            android:id="@+id/launchTelnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LaunchStyle"
+            android:layout_marginBottom="30dp"
+          android:background="@color/button_color"
+            android:text="@string/launch_telnet_session" />
+
+    </LinearLayout>
+
+<!-- hrule 
+    android:background="@android:color/darker_gray"
+-->
+<View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginBottom="30dp"
+    android:background="#404040" 
+/>
+
+     <Button
+         android:id="@+id/startServer"
+          android:layout_width="400dp"
+         android:layout_height="wrap_content"
+style="@style/LaunchStyle"
+          android:background="@color/button_color"
+         android:text="@string/start_server" />
+<!--
+         android:layout_width="wrap_content"
+-->
+
+    <TextView
+        android:id="@+id/localIPLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/local_ip_label" />
+
+<View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:layout_marginBottom="20dp"
+    android:background="#404040" 
+/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+
+        <Button
+            android:id="@+id/helpButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LaunchStyle"
+          android:background="@color/button_color"
+            android:text="@string/help_button_text" />
+
+
+        <Button
+            android:id="@+id/licenseButton"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/LaunchStyle"
+          android:background="@color/button_color"
+            android:text="@string/license_button_text" />
+
+     </LinearLayout>
+
+</LinearLayout>

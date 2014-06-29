@@ -1,0 +1,87 @@
+package com.lazydog.lavalamp;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
+import javax.microedition.khronos.opengles.GL11;
+
+import android.opengl.GLSurfaceView;
+import android.content.Context;
+
+import android.view.MotionEvent;
+
+import android.util.Log;
+
+
+//for fetching screen dimensions:
+import android.view.WindowManager;
+import android.view.Display;
+
+public class LavaLampView extends GLSurfaceView
+{
+  public static final long  TIMEOUT = 50;
+
+  public float m_ScreenWidth, m_ScreenHeight;
+
+  LavaLampRenderer mRenderer;
+  public float m_Horizontal = 0.0f,
+                m_Vertical = 0.0f, m_TempHorizontal, m_TempVertical;
+  public float m_InitialX = 0.0f, m_InitialY = 0.0f;
+  public long m_LastEventTime = 0;
+
+  public LavaLampView(Context context) 
+  {
+    super(context);
+
+    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+    Display display = wm.getDefaultDisplay();
+    android.graphics.Point size = new android.graphics.Point();
+    display.getSize(size);
+    m_ScreenWidth= (int)size.x;
+    m_ScreenHeight= (int)size.y;
+    Log.v(this.getClass().getName(), "LavaLampView: width="+m_ScreenWidth+" height="+m_ScreenHeight);
+
+    mRenderer = new LavaLampRenderer();
+    mRenderer.setContext(context);
+    mRenderer.setDimensions(m_ScreenWidth, m_ScreenHeight );
+
+    setRenderer(mRenderer);
+  }
+
+  public boolean onTouchEvent(MotionEvent ev)
+  {
+
+    switch (ev.getAction() & MotionEvent.ACTION_MASK)
+    {
+      case MotionEvent.ACTION_MOVE:
+        if (ev.getEventTime() - m_LastEventTime > TIMEOUT )  {
+          m_InitialX = ev.getX(0);
+          m_InitialY = ev.getY(0);
+          m_Horizontal = m_Horizontal + m_TempHorizontal;
+          m_Vertical = m_Vertical + m_TempVertical;
+        }
+
+        m_LastEventTime=ev.getEventTime();
+        //Log.v(this.getClass().getName(), "ACTION_MOVE: getX(0) = "+ev.getX(0)+" getY(0)="+ev.getY(0) +" m_InitialX="+m_InitialX+" m_InitialY="+m_InitialY); 
+//        float y = ev.getY(0) - m_InitialY - (SCREEN_HEIGHT/2) ;
+        float y =m_InitialY - ev.getY(0);
+        m_TempVertical = (y / m_ScreenHeight);
+
+
+        mRenderer.setVertical ( m_Vertical + m_TempVertical );
+        //mRenderer.setAngle ( (y / (SCREEN_HEIGHT/2)) * MAX_ANGLE );
+
+	float x =m_InitialX - ev.getX(0);
+        m_TempHorizontal = (x / m_ScreenWidth);
+         
+        mRenderer.setHorizontal ( m_Horizontal + m_TempHorizontal);
+
+        break;
+//      case MotionEvent.ACTION_DOWN: break //initial press...
+    }
+
+    return true;
+  }
+
+}
+
+

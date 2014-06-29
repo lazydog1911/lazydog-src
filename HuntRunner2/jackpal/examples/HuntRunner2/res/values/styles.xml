@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="CustomText">
+  <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+  <item name="android:layout_marginTop">10dp</item>
+  <item name="android:layout_marginLeft">10dp</item>
+  <item name="android:layout_marginRight">5dp</item>
+  <item name="android:textColor">#00FFFF</item>
+  <item name="android:background">#80005555</item>
+  <item name="android:padding">10dp</item>
+  <item name="android:layout_width">45dip</item>
+</style>
+
+<style name="CustomTextPlaceholder">
+  <item name="android:layout_marginTop">10dp</item>
+  <item name="android:layout_marginLeft">20dp</item>
+  <item name="android:layout_marginRight">5dp</item>
+  <item name="android:padding">5dp</item>
+</style>
+
+<style name="LaunchStyle">
+  <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+  <item name="android:padding">10dp</item>
+  <item name="android:layout_marginLeft">20dp</item>
+</style>
+
+
+<!-- for legalese/Hunt License: -->
+<!--
+<color name="black">#FF000000</color>
+-->
+<color name="whitegrey">#FFF2F2F2</color>
+   <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+<style name="dialog_light" parent="@android:style/Theme.Dialog">
+    <item name="@android:windowBackground">@color/whitegrey</item>
+    <item name="@android:textColor">@color/black</item>        
+</style>
+
+<color name="button_color">#A0A0A0</color>
+
+</resources>

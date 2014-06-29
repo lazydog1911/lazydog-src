@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+<!-- for legalese/Hunt License: -->
+<!--
+<color name="black">#FF000000</color>
+-->
+<color name="whitegrey">#FFF2F2F2</color>
+   <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+<style name="dialog_light" parent="@android:style/Theme.Dialog">
+    <item name="@android:windowBackground">@color/whitegrey</item>
+    <item name="@android:textColor">@color/black</item>
+</style>
+
+</resources>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	>
+
+<Preference
+    android:key="pref_static_field_key"
+    android:selectable="false"
+    android:title="@string/settings_title"
+    android:summary="@string/settings_summary"/>
+
+<!-- LavaLamp Live Wall Paper -->
+<!-- LavaLamp LWP\nLazyDog Productions -->
+
+<PreferenceCategory android:title="@string/category" >
+   <EditTextPreference 
+            	android:title="@string/colorTopLeftTitle" 
+		android:defaultValue=""
+            	android:key="prefColorTopLeft"/>
+   <EditTextPreference 
+            	android:title="@string/colorTopRightTitle" 
+		android:defaultValue=""
+            	android:key="prefColorTopRight"/>
+   <EditTextPreference 
+            	android:title="@string/colorBottomRightTitle" 
+		android:defaultValue=""
+            	android:key="prefColorBottomRight"/>
+   <EditTextPreference 
+            	android:title="@string/colorBottomLeftTitle" 
+		android:defaultValue=""
+            	android:key="prefColorBottomLeft"/>
+   <EditTextPreference 
+            	android:title="@string/colorBlobsTitle" 
+		android:defaultValue=""
+            	android:key="prefColorBlobs"/>
+<!--
+ <intent 
+        android:action="android.intent.action.VIEW"
+        android:targetPackage="com.lazydog.lavalamp"
+        android:targetClass="com.lazydog.lavalamp.LicenseDialogActivity"
+    />
+-->
+</PreferenceCategory>
+
+</PreferenceScreen>

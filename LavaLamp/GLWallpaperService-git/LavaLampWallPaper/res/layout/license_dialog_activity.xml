@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    android:scrollbars="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true" 
+>
+ 
+<LinearLayout 
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+ 
+
+
+<!-- legalese -->
+    <TextView
+        android:id="@+id/licenseText"
+        android:text="@string/copyright_info" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textSize="9sp" />
+
+
+
+ 
+</LinearLayout>
+</ScrollView>

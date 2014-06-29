@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <!-- Additional targets for the ant-driven Android project build -->
+    <target name="-pre-build">
+        <!-- Build the execpty binary via the makefile -->
+        <exec executable="make" searchpath="true" />
+
+<echo message="Copying hunt-arm binary to assets/"/>
+<copy file="../../../bsd-games-2.17/hunt-mine/hunt/hunt-arm" todir="assets/"/>
+<chmod file="assets/hunt-arm" perm="755"/>
+<echo message="Copying huntd-arm binary to assets/"/>
+<copy file="../../../bsd-games-2.17/hunt-mine/huntd/huntd-arm" todir="assets/"/>
+<chmod file="assets/huntd-arm" perm="755"/>
+<echo message="Copying terminfo file to assets/"/>
+<copy file="terminfo/v/vt100" todir="assets/"/>
+
+<!--
+<echo message="Copying hunt.sh to assets/"/>
+<copy file="hunt.sh" todir="assets/"/>
+-->
+    </target>
+
+<target name="-pre-compile">
+<echo message="writing build info to buildtimestamp.properties"/>
+<tstamp>
+<format property="build.timestamp" pattern="yyyy.MM.dd HH:mm" locale="en,UK" />
+</tstamp>
+<echo message="tstamp=${build.timestamp}${line.separator}" file="buildtimestamp.properties"/>
+<mkdir dir="res/raw"/>
+<copy file="buildtimestamp.properties" todir="res/raw/"/>
+</target>
+
+    <target name="-pre-clean">
+        <exec executable="make" searchpath="true">
+            <arg value="clean" />
+        </exec>
+    </target>
+</project>

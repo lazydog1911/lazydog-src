@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Lava Lamp</string>
+	<string name="service_label">GL Wallpaper LavaLamp Project</string>
+	<string name="description">An OpenGL live wallpaper - A Lava Lamp</string>
+ <string name="name_label">LavaLamp</string>
+
+
+<!-- for settings area : -->
+<string name="help_msg">double-tap for settings</string>
+<string name="color_warning">one or more colors could not be parsed. please check settings</string>
+<string name="settings_title">LavaLamp Live Wall Paper</string>
+<string name="settings_summary">LazyDog Productions</string>
+<string name="category">Colors (#rrggbbaa format)</string>
+
+
+		<string name="colorTopLeftTitle">Background Top Left</string>
+		<string name="colorTopRightTitle">Background Top Right</string>
+		<string name="colorBottomRightTitle">Bottom Right</string>
+		<string name="colorBottomLeftTitle">Bottom Left</string>
+                <string name="colorBlobsTitle">Blobs</string>
+
+<!-- legalese: -->
+<string name="license_dialog_title">COPYRIGHT &amp; ATTRIBUTIONS</string>
+<string name="copyright_info">This app is derived from the xscreensaver-gl module "lavalite":\n
+\n
+/* xscreensaver, Copyright (c) 1992-2001 Jamie Zawinski &lt;jwz@jwz.org&gt;\n
+*\n
+* Permission to use, copy, modify, distribute, and sell this software and its\n
+* documentation for any purpose is hereby granted without fee, provided that\n
+* the above copyright notice appear in all copies and that both that\n
+* copyright notice and this permission notice appear in supporting\n
+* documentation.  No representations are made about the suitability of this\n
+* software for any purpose.  It is provided "as is" without express or\n
+* implied warranty.\n
+*/\n
+\n
+ * Marching cubes implementation by Paul Bourke &lt;pbourke@swin.edu.au&gt;\n
+ * http://astronomy.swin.edu.au/~pbourke/modelling/polygonise/\n
+\n
+-also includes GLWallpaperService library, https://github.com/GLWallpaperService/GLWallpaperService, Apache License 2.0
+</string>
+
+
+</resources>
+

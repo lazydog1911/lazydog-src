@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.lazydog.huntrunner2"
+      android:versionCode="2"
+      android:versionName="1.01">
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="11" />
+    <uses-permission android:name="android.permission.INTERNET" />
+   <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name="HuntRunner2Activity"
+                  android:screenOrientation="landscape"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="@string/app_name"
+android:theme="@android:style/Theme.NoTitleBar"
+>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="TermActivity"
+                  android:label="@string/app_name"
+                  android:configChanges="keyboard|keyboardHidden|orientation"
+                  android:windowSoftInputMode="adjustResize" 
+android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:screenOrientation="landscape"
+                  />
+
+        <activity android:name="LicenseDialogActivity"
+                  android:label="@string/license_dialog_title"
+                  android:theme="@style/dialog_light"
+                  android:excludeFromRecents="true" />
+<!--
+                  android:theme="CustomDialog"
+                  android:theme="@android:style/Theme.Dialog" 
+-->
+
+<!--
+                  android:windowBackground="#FFF2F2F2"
+                  android:textColor="#FF000000"
+-->
+
+    </application>
+</manifest>
